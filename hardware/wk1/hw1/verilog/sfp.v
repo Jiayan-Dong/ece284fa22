@@ -1,5 +1,8 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
+// Student name: Jiayan Dong
+// PID: A16593051
+// Date: 10/3/2022
 module sfp (out, in, thres, acc, relu, clk, reset);
 
 parameter bw = 4;
