@@ -113,8 +113,15 @@ initial begin
      a = dec2bin(x_dec); 
      b = dec2bin(w_dec); 
      c = expected_out;
-
+     if (i != 0) begin
+      if (out == expected_out) begin
+        $display("Correct result! Out: %d, Expected out: %d", out, expected_out);
+      end else begin
+        $display("Wrong result! Out: %d, Expected out: %d", out, expected_out);
+      end
+     end
      expected_out = mac_predicted(a, b, c);
+     
 
   end
 
