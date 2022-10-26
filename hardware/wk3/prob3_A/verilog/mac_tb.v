@@ -62,20 +62,52 @@ endfunction
 
 
 function [3:0] x_bin ;
+  input integer  activation ;
+  begin
+    activation = activation & 4'b1111;
+    if (activation>7) begin
+     x_bin[3] = 1;
+     activation = activation - 8;
+    end
+    else begin
+     x_bin[3] = 0;
+    end
 
-...
+    if (activation>3) begin
+     x_bin[2] = 1;
+     activation = activation - 4;
+    end
+    else begin
+     x_bin[2] = 0;
+    end
+
+    if (activation>1) begin
+     x_bin[1] = 1;
+     activation = activation - 2;
+    end
+    else begin
+     x_bin[1] = 0;
+    end
+
+    if (activation>0) 
+     x_bin[0] = 1;
+    else 
+     x_bin[0] = 0;
+
+  end
 
 endfunction
 
 
 // Below function is for verification
 function [psum_bw-1:0] mac_predicted;
-  
-...
+  input [bw-1:0] a;
+  input signed [bw-1:0] b;
+  input signed [psum_bw-1:0] c;
+
+  mac_predicted = $signed({1'b0, a}) * b + c;
 
 endfunction
-
-
 
 mac_wrapper #(.bw(bw), .psum_bw(psum_bw)) mac_wrapper_instance (
 	.clk(clk), 
@@ -101,7 +133,7 @@ initial begin
   $display("-------------------- Computation start --------------------");
   
 
-  for (i=0; i<10; i=i+1) begin  // Data lenght is 10 in the data files
+  for (i=0; i<20; i=i+1) begin  // Data lenght is 20 in the data files
 
      #1 clk = 1'b1;
      #1 clk = 1'b0;
