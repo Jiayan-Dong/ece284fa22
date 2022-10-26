@@ -7,88 +7,88 @@
 :vpi_module "/home/jiayandong/2022_Spring/CSE_148/oss-cad-suite/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/home/jiayandong/2022_Spring/CSE_148/oss-cad-suite/lib/ivl/v2005_math.vpi";
 :vpi_module "/home/jiayandong/2022_Spring/CSE_148/oss-cad-suite/lib/ivl/va_math.vpi";
-S_0x555555ace530 .scope module, "mac_tb" "mac_tb" 2 5;
+S_0x5555570ec530 .scope module, "mac_tb" "mac_tb" 2 8;
  .timescale 0 0;
-P_0x555555ac6110 .param/l "bw" 0 2 7, +C4<00000000000000000000000000000100>;
-P_0x555555ac6150 .param/l "psum_bw" 0 2 8, +C4<00000000000000000000000000010000>;
-v0x555555b02300_0 .var "a", 3 0;
-v0x555555b02410_0 .var "b", 3 0;
-v0x555555b024e0_0 .var "c", 15 0;
-v0x555555b025e0_0 .var "clk", 0 0;
-v0x555555b026b0_0 .var "expected_out", 15 0;
-v0x555555b027a0_0 .var/i "i", 31 0;
-v0x555555b02860_0 .net "out", 15 0, L_0x555555b033a0;  1 drivers
-v0x555555b02970_0 .var/i "w_dec", 31 0;
-v0x555555b02a50_0 .var/i "w_file", 31 0;
-v0x555555b02bc0_0 .var/i "w_scan_file", 31 0;
-v0x555555b02ca0_0 .var/i "x_dec", 31 0;
-v0x555555b02d80_0 .var/i "x_file", 31 0;
-v0x555555b02e60_0 .var/i "x_scan_file", 31 0;
-S_0x555555ace760 .scope function.vec4.s16, "mac_predicted" "mac_predicted" 2 103, 2 103 0, S_0x555555ace530;
+P_0x5555570e4110 .param/l "bw" 0 2 10, +C4<00000000000000000000000000000100>;
+P_0x5555570e4150 .param/l "psum_bw" 0 2 11, +C4<00000000000000000000000000010000>;
+v0x555557120300_0 .var "a", 3 0;
+v0x555557120410_0 .var "b", 3 0;
+v0x5555571204e0_0 .var "c", 15 0;
+v0x5555571205e0_0 .var "clk", 0 0;
+v0x5555571206b0_0 .var "expected_out", 15 0;
+v0x5555571207a0_0 .var/i "i", 31 0;
+v0x555557120860_0 .net "out", 15 0, L_0x5555571213a0;  1 drivers
+v0x555557120970_0 .var/i "w_dec", 31 0;
+v0x555557120a50_0 .var/i "w_file", 31 0;
+v0x555557120bc0_0 .var/i "w_scan_file", 31 0;
+v0x555557120ca0_0 .var/i "x_dec", 31 0;
+v0x555557120d80_0 .var/i "x_file", 31 0;
+v0x555557120e60_0 .var/i "x_scan_file", 31 0;
+S_0x5555570ec760 .scope function.vec4.s16, "mac_predicted" "mac_predicted" 2 106, 2 106 0, S_0x5555570ec530;
  .timescale 0 0;
-v0x555555a97290_0 .var "a", 3 0;
-v0x555555a97050_0 .var/s "b", 3 0;
-v0x555555b00270_0 .var/s "c", 15 0;
-; Variable mac_predicted is vec4 return value of scope S_0x555555ace760
+v0x5555570b5290_0 .var "a", 3 0;
+v0x5555570b5050_0 .var/s "b", 3 0;
+v0x55555711e270_0 .var/s "c", 15 0;
+; Variable mac_predicted is vec4 return value of scope S_0x5555570ec760
 TD_mac_tb.mac_predicted ;
     %pushi/vec4 0, 0, 1;
-    %load/vec4 v0x555555a97290_0;
+    %load/vec4 v0x5555570b5290_0;
     %concat/vec4; draw_concat_vec4
     %pad/s 16;
-    %load/vec4 v0x555555a97050_0;
+    %load/vec4 v0x5555570b5050_0;
     %pad/s 16;
     %mul;
-    %load/vec4 v0x555555b00270_0;
+    %load/vec4 v0x55555711e270_0;
     %add;
     %ret/vec4 0, 0, 16;  Assign to mac_predicted (store_vec4_to_lval)
     %end;
-S_0x555555b00410 .scope module, "mac_wrapper_instance" "mac_wrapper" 2 112, 3 3 0, S_0x555555ace530;
+S_0x55555711e410 .scope module, "mac_wrapper_instance" "mac_wrapper" 2 115, 3 8 0, S_0x5555570ec530;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /OUTPUT 16 "out";
     .port_info 2 /INPUT 4 "a";
     .port_info 3 /INPUT 4 "b";
     .port_info 4 /INPUT 16 "c";
-P_0x555555ac87b0 .param/l "bw" 0 3 5, +C4<00000000000000000000000000000100>;
-P_0x555555ac87f0 .param/l "psum_bw" 0 3 6, +C4<00000000000000000000000000010000>;
-v0x555555b01460_0 .net "a", 3 0, v0x555555b02300_0;  1 drivers
-v0x555555b01560_0 .var "a_q", 3 0;
-v0x555555b01620_0 .net "b", 3 0, v0x555555b02410_0;  1 drivers
-v0x555555b016f0_0 .var "b_q", 3 0;
-v0x555555b017e0_0 .net "c", 15 0, v0x555555b024e0_0;  1 drivers
-v0x555555b018a0_0 .var "c_q", 15 0;
-v0x555555b01960_0 .net "clk", 0 0, v0x555555b025e0_0;  1 drivers
-v0x555555b01a00_0 .net "out", 15 0, L_0x555555b033a0;  alias, 1 drivers
-E_0x555555acd700 .event posedge, v0x555555b01960_0;
-S_0x555555b007c0 .scope module, "mac_instance" "mac" 3 18, 4 3 0, S_0x555555b00410;
+P_0x5555570e67b0 .param/l "bw" 0 3 10, +C4<00000000000000000000000000000100>;
+P_0x5555570e67f0 .param/l "psum_bw" 0 3 11, +C4<00000000000000000000000000010000>;
+v0x55555711f460_0 .net "a", 3 0, v0x555557120300_0;  1 drivers
+v0x55555711f560_0 .var "a_q", 3 0;
+v0x55555711f620_0 .net "b", 3 0, v0x555557120410_0;  1 drivers
+v0x55555711f6f0_0 .var "b_q", 3 0;
+v0x55555711f7e0_0 .net "c", 15 0, v0x5555571204e0_0;  1 drivers
+v0x55555711f8a0_0 .var "c_q", 15 0;
+v0x55555711f960_0 .net "clk", 0 0, v0x5555571205e0_0;  1 drivers
+v0x55555711fa00_0 .net "out", 15 0, L_0x5555571213a0;  alias, 1 drivers
+E_0x5555570eb700 .event posedge, v0x55555711f960_0;
+S_0x55555711e7c0 .scope module, "mac_instance" "mac" 3 23, 4 8 0, S_0x55555711e410;
  .timescale 0 0;
     .port_info 0 /OUTPUT 16 "out";
     .port_info 1 /INPUT 4 "a";
     .port_info 2 /INPUT 4 "b";
     .port_info 3 /INPUT 16 "c";
-P_0x555555b00660 .param/l "bw" 0 4 5, +C4<00000000000000000000000000000100>;
-P_0x555555b006a0 .param/l "psum_bw" 0 4 6, +C4<00000000000000000000000000010000>;
-L_0x7ff21b6b0018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v0x555555b00b80_0 .net/2u *"_ivl_0", 0 0, L_0x7ff21b6b0018;  1 drivers
-v0x555555b00c80_0 .net *"_ivl_2", 4 0, L_0x555555b02f40;  1 drivers
-v0x555555b00d60_0 .net/s *"_ivl_4", 15 0, L_0x555555b03050;  1 drivers
-v0x555555b00e50_0 .net/s *"_ivl_6", 15 0, L_0x555555b03140;  1 drivers
-v0x555555b00f30_0 .net/s *"_ivl_9", 15 0, L_0x555555b03230;  1 drivers
-v0x555555b01060_0 .net "a", 3 0, v0x555555b01560_0;  1 drivers
-v0x555555b01140_0 .net/s "b", 3 0, v0x555555b016f0_0;  1 drivers
-v0x555555b01220_0 .net/s "c", 15 0, v0x555555b018a0_0;  1 drivers
-v0x555555b01300_0 .net/s "out", 15 0, L_0x555555b033a0;  alias, 1 drivers
-L_0x555555b02f40 .concat [ 4 1 0 0], v0x555555b01560_0, L_0x7ff21b6b0018;
-L_0x555555b03050 .extend/s 16, L_0x555555b02f40;
-L_0x555555b03140 .extend/s 16, v0x555555b016f0_0;
-L_0x555555b03230 .arith/mult 16, L_0x555555b03050, L_0x555555b03140;
-L_0x555555b033a0 .arith/sum 16, L_0x555555b03230, v0x555555b018a0_0;
-S_0x555555b01ba0 .scope function.vec4.s4, "w_bin" "w_bin" 2 29, 2 29 0, S_0x555555ace530;
+P_0x55555711e660 .param/l "bw" 0 4 10, +C4<00000000000000000000000000000100>;
+P_0x55555711e6a0 .param/l "psum_bw" 0 4 11, +C4<00000000000000000000000000010000>;
+L_0x7fe03e5e7018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55555711eb80_0 .net/2u *"_ivl_0", 0 0, L_0x7fe03e5e7018;  1 drivers
+v0x55555711ec80_0 .net *"_ivl_2", 4 0, L_0x555557120f40;  1 drivers
+v0x55555711ed60_0 .net/s *"_ivl_4", 15 0, L_0x555557121050;  1 drivers
+v0x55555711ee50_0 .net/s *"_ivl_6", 15 0, L_0x555557121140;  1 drivers
+v0x55555711ef30_0 .net/s *"_ivl_9", 15 0, L_0x555557121230;  1 drivers
+v0x55555711f060_0 .net "a", 3 0, v0x55555711f560_0;  1 drivers
+v0x55555711f140_0 .net/s "b", 3 0, v0x55555711f6f0_0;  1 drivers
+v0x55555711f220_0 .net/s "c", 15 0, v0x55555711f8a0_0;  1 drivers
+v0x55555711f300_0 .net/s "out", 15 0, L_0x5555571213a0;  alias, 1 drivers
+L_0x555557120f40 .concat [ 4 1 0 0], v0x55555711f560_0, L_0x7fe03e5e7018;
+L_0x555557121050 .extend/s 16, L_0x555557120f40;
+L_0x555557121140 .extend/s 16, v0x55555711f6f0_0;
+L_0x555557121230 .arith/mult 16, L_0x555557121050, L_0x555557121140;
+L_0x5555571213a0 .arith/sum 16, L_0x555557121230, v0x55555711f8a0_0;
+S_0x55555711fba0 .scope function.vec4.s4, "w_bin" "w_bin" 2 32, 2 32 0, S_0x5555570ec530;
  .timescale 0 0;
-; Variable w_bin is vec4 return value of scope S_0x555555b01ba0
-v0x555555b01e60_0 .var/i "weight", 31 0;
+; Variable w_bin is vec4 return value of scope S_0x55555711fba0
+v0x55555711fe60_0 .var/i "weight", 31 0;
 TD_mac_tb.w_bin ;
-    %load/vec4 v0x555555b01e60_0;
+    %load/vec4 v0x55555711fe60_0;
     %cmpi/s 4294967295, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -103,11 +103,11 @@ T_1.0 ;
     %ix/load 4, 3, 0;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to w_bin (store_vec4_to_lval)
-    %load/vec4 v0x555555b01e60_0;
+    %load/vec4 v0x55555711fe60_0;
     %addi 8, 0, 32;
-    %store/vec4 v0x555555b01e60_0, 0, 32;
+    %store/vec4 v0x55555711fe60_0, 0, 32;
 T_1.1 ;
-    %load/vec4 v0x555555b01e60_0;
+    %load/vec4 v0x55555711fe60_0;
     %cmpi/s 3, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -116,9 +116,9 @@ T_1.1 ;
     %ix/load 4, 2, 0;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to w_bin (store_vec4_to_lval)
-    %load/vec4 v0x555555b01e60_0;
+    %load/vec4 v0x55555711fe60_0;
     %subi 4, 0, 32;
-    %store/vec4 v0x555555b01e60_0, 0, 32;
+    %store/vec4 v0x55555711fe60_0, 0, 32;
     %jmp T_1.3;
 T_1.2 ;
     %pushi/vec4 0, 0, 1;
@@ -126,7 +126,7 @@ T_1.2 ;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to w_bin (store_vec4_to_lval)
 T_1.3 ;
-    %load/vec4 v0x555555b01e60_0;
+    %load/vec4 v0x55555711fe60_0;
     %cmpi/s 1, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -135,9 +135,9 @@ T_1.3 ;
     %ix/load 4, 1, 0;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to w_bin (store_vec4_to_lval)
-    %load/vec4 v0x555555b01e60_0;
+    %load/vec4 v0x55555711fe60_0;
     %subi 2, 0, 32;
-    %store/vec4 v0x555555b01e60_0, 0, 32;
+    %store/vec4 v0x55555711fe60_0, 0, 32;
     %jmp T_1.5;
 T_1.4 ;
     %pushi/vec4 0, 0, 1;
@@ -145,7 +145,7 @@ T_1.4 ;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to w_bin (store_vec4_to_lval)
 T_1.5 ;
-    %load/vec4 v0x555555b01e60_0;
+    %load/vec4 v0x55555711fe60_0;
     %cmpi/s 0, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -162,16 +162,16 @@ T_1.6 ;
     %ret/vec4 0, 4, 1; Assign to w_bin (store_vec4_to_lval)
 T_1.7 ;
     %end;
-S_0x555555b01f40 .scope function.vec4.s4, "x_bin" "x_bin" 2 64, 2 64 0, S_0x555555ace530;
+S_0x55555711ff40 .scope function.vec4.s4, "x_bin" "x_bin" 2 67, 2 67 0, S_0x5555570ec530;
  .timescale 0 0;
-v0x555555b02120_0 .var/i "activation", 31 0;
-; Variable x_bin is vec4 return value of scope S_0x555555b01f40
+v0x555557120120_0 .var/i "activation", 31 0;
+; Variable x_bin is vec4 return value of scope S_0x55555711ff40
 TD_mac_tb.x_bin ;
-    %load/vec4 v0x555555b02120_0;
+    %load/vec4 v0x555557120120_0;
     %pushi/vec4 15, 0, 32;
     %and;
-    %store/vec4 v0x555555b02120_0, 0, 32;
-    %load/vec4 v0x555555b02120_0;
+    %store/vec4 v0x555557120120_0, 0, 32;
+    %load/vec4 v0x555557120120_0;
     %cmpi/s 7, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -180,9 +180,9 @@ TD_mac_tb.x_bin ;
     %ix/load 4, 3, 0;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to x_bin (store_vec4_to_lval)
-    %load/vec4 v0x555555b02120_0;
+    %load/vec4 v0x555557120120_0;
     %subi 8, 0, 32;
-    %store/vec4 v0x555555b02120_0, 0, 32;
+    %store/vec4 v0x555557120120_0, 0, 32;
     %jmp T_2.9;
 T_2.8 ;
     %pushi/vec4 0, 0, 1;
@@ -190,7 +190,7 @@ T_2.8 ;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to x_bin (store_vec4_to_lval)
 T_2.9 ;
-    %load/vec4 v0x555555b02120_0;
+    %load/vec4 v0x555557120120_0;
     %cmpi/s 3, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -199,9 +199,9 @@ T_2.9 ;
     %ix/load 4, 2, 0;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to x_bin (store_vec4_to_lval)
-    %load/vec4 v0x555555b02120_0;
+    %load/vec4 v0x555557120120_0;
     %subi 4, 0, 32;
-    %store/vec4 v0x555555b02120_0, 0, 32;
+    %store/vec4 v0x555557120120_0, 0, 32;
     %jmp T_2.11;
 T_2.10 ;
     %pushi/vec4 0, 0, 1;
@@ -209,7 +209,7 @@ T_2.10 ;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to x_bin (store_vec4_to_lval)
 T_2.11 ;
-    %load/vec4 v0x555555b02120_0;
+    %load/vec4 v0x555557120120_0;
     %cmpi/s 1, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -218,9 +218,9 @@ T_2.11 ;
     %ix/load 4, 1, 0;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to x_bin (store_vec4_to_lval)
-    %load/vec4 v0x555555b02120_0;
+    %load/vec4 v0x555557120120_0;
     %subi 2, 0, 32;
-    %store/vec4 v0x555555b02120_0, 0, 32;
+    %store/vec4 v0x555557120120_0, 0, 32;
     %jmp T_2.13;
 T_2.12 ;
     %pushi/vec4 0, 0, 1;
@@ -228,7 +228,7 @@ T_2.12 ;
     %flag_set/imm 4, 0;
     %ret/vec4 0, 4, 1; Assign to x_bin (store_vec4_to_lval)
 T_2.13 ;
-    %load/vec4 v0x555555b02120_0;
+    %load/vec4 v0x555557120120_0;
     %cmpi/s 0, 0, 32;
     %flag_or 5, 4; GT is !LE
     %flag_inv 5;
@@ -245,97 +245,97 @@ T_2.14 ;
     %ret/vec4 0, 4, 1; Assign to x_bin (store_vec4_to_lval)
 T_2.15 ;
     %end;
-    .scope S_0x555555b00410;
+    .scope S_0x55555711e410;
 T_3 ;
-    %wait E_0x555555acd700;
-    %load/vec4 v0x555555b01620_0;
-    %assign/vec4 v0x555555b016f0_0, 0;
-    %load/vec4 v0x555555b01460_0;
-    %assign/vec4 v0x555555b01560_0, 0;
-    %load/vec4 v0x555555b017e0_0;
-    %assign/vec4 v0x555555b018a0_0, 0;
+    %wait E_0x5555570eb700;
+    %load/vec4 v0x55555711f620_0;
+    %assign/vec4 v0x55555711f6f0_0, 0;
+    %load/vec4 v0x55555711f460_0;
+    %assign/vec4 v0x55555711f560_0, 0;
+    %load/vec4 v0x55555711f7e0_0;
+    %assign/vec4 v0x55555711f8a0_0, 0;
     %jmp T_3;
     .thread T_3;
-    .scope S_0x555555ace530;
+    .scope S_0x5555570ec530;
 T_4 ;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
+    %store/vec4 v0x5555571205e0_0, 0, 1;
     %pushi/vec4 0, 0, 16;
-    %store/vec4 v0x555555b026b0_0, 0, 16;
+    %store/vec4 v0x5555571206b0_0, 0, 16;
     %end;
     .thread T_4;
-    .scope S_0x555555ace530;
+    .scope S_0x5555570ec530;
 T_5 ;
-    %vpi_func 2 123 "$fopen" 32, "b_data.txt", "r" {0 0 0};
-    %store/vec4 v0x555555b02a50_0, 0, 32;
-    %vpi_func 2 124 "$fopen" 32, "a_data.txt", "r" {0 0 0};
-    %store/vec4 v0x555555b02d80_0, 0, 32;
-    %vpi_call 2 126 "$dumpfile", "mac_tb.vcd" {0 0 0};
-    %vpi_call 2 127 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x555555ace530 {0 0 0};
+    %vpi_func 2 126 "$fopen" 32, "b_data.txt", "r" {0 0 0};
+    %store/vec4 v0x555557120a50_0, 0, 32;
+    %vpi_func 2 127 "$fopen" 32, "a_data.txt", "r" {0 0 0};
+    %store/vec4 v0x555557120d80_0, 0, 32;
+    %vpi_call 2 129 "$dumpfile", "mac_tb.vcd" {0 0 0};
+    %vpi_call 2 130 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5555570ec530 {0 0 0};
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
+    %store/vec4 v0x5555571205e0_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
+    %store/vec4 v0x5555571205e0_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
-    %vpi_call 2 133 "$display", "-------------------- Computation start --------------------" {0 0 0};
+    %store/vec4 v0x5555571205e0_0, 0, 1;
+    %vpi_call 2 136 "$display", "-------------------- Computation start --------------------" {0 0 0};
     %pushi/vec4 0, 0, 32;
-    %store/vec4 v0x555555b027a0_0, 0, 32;
+    %store/vec4 v0x5555571207a0_0, 0, 32;
 T_5.0 ;
-    %load/vec4 v0x555555b027a0_0;
+    %load/vec4 v0x5555571207a0_0;
     %cmpi/s 20, 0, 32;
     %jmp/0xz T_5.1, 5;
     %delay 1, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
+    %store/vec4 v0x5555571205e0_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
-    %vpi_func 2 141 "$fscanf" 32, v0x555555b02a50_0, "%d\012", v0x555555b02970_0 {0 0 0};
-    %store/vec4 v0x555555b02bc0_0, 0, 32;
-    %vpi_func 2 142 "$fscanf" 32, v0x555555b02d80_0, "%d\012", v0x555555b02ca0_0 {0 0 0};
-    %store/vec4 v0x555555b02e60_0, 0, 32;
-    %load/vec4 v0x555555b02ca0_0;
-    %store/vec4 v0x555555b02120_0, 0, 32;
-    %callf/vec4 TD_mac_tb.x_bin, S_0x555555b01f40;
-    %store/vec4 v0x555555b02300_0, 0, 4;
-    %load/vec4 v0x555555b02970_0;
-    %store/vec4 v0x555555b01e60_0, 0, 32;
-    %callf/vec4 TD_mac_tb.w_bin, S_0x555555b01ba0;
-    %store/vec4 v0x555555b02410_0, 0, 4;
-    %load/vec4 v0x555555b026b0_0;
-    %store/vec4 v0x555555b024e0_0, 0, 16;
-    %load/vec4 v0x555555b02300_0;
-    %load/vec4 v0x555555b02410_0;
-    %load/vec4 v0x555555b024e0_0;
-    %store/vec4 v0x555555b00270_0, 0, 16;
-    %store/vec4 v0x555555a97050_0, 0, 4;
-    %store/vec4 v0x555555a97290_0, 0, 4;
-    %callf/vec4 TD_mac_tb.mac_predicted, S_0x555555ace760;
-    %store/vec4 v0x555555b026b0_0, 0, 16;
-    %load/vec4 v0x555555b027a0_0;
+    %store/vec4 v0x5555571205e0_0, 0, 1;
+    %vpi_func 2 144 "$fscanf" 32, v0x555557120a50_0, "%d\012", v0x555557120970_0 {0 0 0};
+    %store/vec4 v0x555557120bc0_0, 0, 32;
+    %vpi_func 2 145 "$fscanf" 32, v0x555557120d80_0, "%d\012", v0x555557120ca0_0 {0 0 0};
+    %store/vec4 v0x555557120e60_0, 0, 32;
+    %load/vec4 v0x555557120ca0_0;
+    %store/vec4 v0x555557120120_0, 0, 32;
+    %callf/vec4 TD_mac_tb.x_bin, S_0x55555711ff40;
+    %store/vec4 v0x555557120300_0, 0, 4;
+    %load/vec4 v0x555557120970_0;
+    %store/vec4 v0x55555711fe60_0, 0, 32;
+    %callf/vec4 TD_mac_tb.w_bin, S_0x55555711fba0;
+    %store/vec4 v0x555557120410_0, 0, 4;
+    %load/vec4 v0x5555571206b0_0;
+    %store/vec4 v0x5555571204e0_0, 0, 16;
+    %load/vec4 v0x555557120300_0;
+    %load/vec4 v0x555557120410_0;
+    %load/vec4 v0x5555571204e0_0;
+    %store/vec4 v0x55555711e270_0, 0, 16;
+    %store/vec4 v0x5555570b5050_0, 0, 4;
+    %store/vec4 v0x5555570b5290_0, 0, 4;
+    %callf/vec4 TD_mac_tb.mac_predicted, S_0x5555570ec760;
+    %store/vec4 v0x5555571206b0_0, 0, 16;
+    %load/vec4 v0x5555571207a0_0;
     %addi 1, 0, 32;
-    %store/vec4 v0x555555b027a0_0, 0, 32;
+    %store/vec4 v0x5555571207a0_0, 0, 32;
     %jmp T_5.0;
 T_5.1 ;
     %delay 1, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
+    %store/vec4 v0x5555571205e0_0, 0, 1;
     %delay 1, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x555555b025e0_0, 0, 1;
-    %vpi_call 2 157 "$display", "-------------------- Computation completed --------------------" {0 0 0};
+    %store/vec4 v0x5555571205e0_0, 0, 1;
+    %vpi_call 2 160 "$display", "-------------------- Computation completed --------------------" {0 0 0};
     %delay 10, 0;
-    %vpi_call 2 159 "$finish" {0 0 0};
+    %vpi_call 2 162 "$finish" {0 0 0};
     %end;
     .thread T_5;
 # The file index is used to find the file name in the following table.
 :file_names 5;
     "N/A";
     "<interactive>";
-    "./verilog/mac_tb.v";
-    "./verilog/mac_wrapper.v";
-    "./verilog/mac.v";
+    "./verilog/mac_tb_A.v";
+    "./verilog/mac_wrapper_A.v";
+    "./verilog/mac_A.v";

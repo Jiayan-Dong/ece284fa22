@@ -1,5 +1,10 @@
 // Created by prof. Mingu Kang @VVIP Lab in UCSD ECE department
 // Please do not spread this code without permission 
+// Hw4 Q3
+// Student name: Jiayan Dong
+// PID: A16593051
+// Date: 10/26/2022
+
 module mac (out, a0, a1, a2, a3, b0, b1, b2, b3, c);
 
 parameter bw = 4;
