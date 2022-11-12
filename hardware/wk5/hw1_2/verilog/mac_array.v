@@ -28,7 +28,7 @@ module mac_array (clk, reset, out_s, in_w, in_n, inst_w, valid);
       mac_row #(.bw(bw), .psum_bw(psum_bw)) mac_row_instance (
          .clk(clk),
          .reset(reset),
-         .in_w(in_w[bw*i-1 : (bw-1)*i]),
+         .in_w(in_w[bw*i-1:bw*(i-1)]),
          .inst_w(inst_w_temp[2*i-1:2*(i-1)]),
          .in_n(temp[psum_bw*col*i-1:psum_bw*col*(i-1)]),
          .valid(valid_temp[col*i-1:col*(i-1)]),
@@ -42,7 +42,7 @@ module mac_array (clk, reset, out_s, in_w, in_n, inst_w, valid);
     inst_w_temp[5:4]   <= inst_w_temp[3:2]; 
     inst_w_temp[7:6]   <= inst_w_temp[5:4]; 
     inst_w_temp[9:8]   <= inst_w_temp[7:6]; 
-    Inst_w_temp[11:10] <= inst_w_temp[9:8];
+    inst_w_temp[11:10] <= inst_w_temp[9:8];
     inst_w_temp[13:12] <= inst_w_temp[11:10]; 
     inst_w_temp[15:14] <= inst_w_temp[13:12]; 
   end
